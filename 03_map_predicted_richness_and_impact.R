@@ -43,7 +43,7 @@ eicat$species_name <- str_to_title(eicat$species_name)
 South_africa <- read_sf("data/shapefiles/zaf_admbnda_adm0_sadb_ocha_20201109.shp")
 
 # Stack of the current distribution
-stack_current <- stack("data/SA_proj_stack/SA_proj_stack_1981_2010.tif")
+stack_current <- stack("output/SA_proj_stack/SA_proj_stack_1981_2010.tif")
 
 if(F){
   for(i in 1:length(names(stack_current))){
