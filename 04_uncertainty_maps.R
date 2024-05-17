@@ -6,9 +6,6 @@ require(ggplot2)
 require(viridis)
 library(stringr)
 
-dir="C:/Users/user/pCloud local/boulot/data/Future acacia impacts SA/future_Acacia_impacts_SA/script_R_aggregation_impact_occurence"
-dir="/home/cbotella/pcloud/boulot/data/Future acacia impacts SA/future_Acacia_impacts_SA/script_R_aggregation_impact_occurence"
-setwd(dir)
 
 ####Functions
 multiplot <- function(plots=NULL, file, cols=1, layout=NULL) {

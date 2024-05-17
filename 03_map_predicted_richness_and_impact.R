@@ -16,8 +16,6 @@ library(raster)
 library(ggplot2)
 library(viridis)
 
-dir="C:/Users/user/pCloud local/boulot/data/Future acacia impacts SA/future_Acacia_impacts_SA/script_R_aggregation_impact_occurence/"
-setwd(dir)
 
 # Function to call
 plot_final <- function(donnees) {
@@ -42,7 +40,7 @@ eicat <- read.csv("output/R_data_eicat_mean_max.csv", header = T, sep = ";", dec
 eicat$species_name <- str_to_title(eicat$species_name)
 
 # South Africa map
-South_africa <- read_sf("data/South_Africa/zaf_admbnda_adm0_sadb_ocha_20201109.shp")
+South_africa <- read_sf("data/shapefiles/zaf_admbnda_adm0_sadb_ocha_20201109.shp")
 
 # Stack of the current distribution
 stack_current <- stack("data/SA_proj_stack/SA_proj_stack_1981_2010.tif")
