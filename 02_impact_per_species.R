@@ -23,8 +23,8 @@ library(ggplot2)
 
 # Importation -------------------------------------------------------------
 
-data.distrib <- read.csv("future_Acacia_impacts_SA/script_R_aggregation_impact_occurence/data/acaciaSA_forSab.csv", header = T, sep = ";", dec = ".")
-data.eicat <-  read_xlsx("future_Acacia_impacts_SA/script_R_aggregation_impact_occurence/data/220817_EICAT Acacias global.xlsx", sheet = "EICAT", na = c("NA", ""))
+data.distrib <- read.csv("data/acaciaSA_forSab.csv", header = T, sep = ";", dec = ".")
+data.eicat <-  read_xlsx("data/220817_EICAT Acacias global.xlsx", sheet = "EICAT", na = c("NA", ""))
 
 # Cleaning ---------------------------------------------------------------
 

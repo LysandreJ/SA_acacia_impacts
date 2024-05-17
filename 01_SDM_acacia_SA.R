@@ -11,26 +11,26 @@ library(doParallel)
 #### INPUT DATA ####
 
 # List of acacia species alien in South-Africa
-acacia <- readRDS("Data/01_acacia_records.rds") 
+acacia <- readRDS("data/01_acacia_records.rds") 
 
 # Administrative bondaries from https://data.humdata.org/dataset/global-international-boundaries-usgs
-world_polygons <- read_sf("Data/shapefiles/adm0_polygons.shp") 
+world_polygons <- read_sf("data/shapefiles/adm0_polygons.shp") 
 
 # Verified GBIF datasets from Botella et al. 2023
-verif_datasets <- read.csv("Data/gbif_datasets.csv", sep =";")
+verif_datasets <- read.csv("data/gbif_datasets.csv", sep =";")
 
 # Native and introduced countries of each species from Botella et al. 2023
-regions <- read.csv("Data/alien_acacia_countries_intro_natur.csv", sep ="\t") 
+regions <- read.csv("data/alien_acacia_countries_intro_natur.csv", sep ="\t") 
 
 # Urban areas from http://due.esrin.esa.int/page_globcover.php
-urb_area <- raster("Data/Globcover/GLOBCOVER_L4_200901_200912_V2.3.tif") 
+urb_area <- raster("data/Globcover/GLOBCOVER_L4_200901_200912_V2.3.tif") 
 
 # Climatic variables raster stack (bio1, bio2, bio12 and bio15) from https://chelsa-climate.org/
-myExpl <- stack("Data/clim_stack/04_CHELSA_stack_1981-2010.tif")
+myExpl <- stack("data/clim_stack/04_CHELSA_stack_1981-2010.tif")
 names(myExpl) <- c('X1', 'X2', 'X3', 'X4')
 
 # South-Africa boundaries from https://data.humdata.org/dataset/cod-ab-zaf
-SA <- read_sf("Data/shapefiles/zaf_admbnda_adm0_sadb_ocha_20201109.shp")
+SA <- read_sf("data/shapefiles/zaf_admbnda_adm0_sadb_ocha_20201109.shp")
 
 
 #### Retrieve GBIF occurrences and filter them ####
